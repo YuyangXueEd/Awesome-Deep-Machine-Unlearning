@@ -8,8 +8,17 @@
 
 ## Contents
 
-- [Survey Papers](#survey-papers)
-- [Methods](#methods)
+- [Awesome-Deep-Machine-Unlearning](#awesome-deep-machine-unlearning)
+  - [Contents](#contents)
+  - [Survey Papers](#survey-papers)
+  - [Methods](#methods)
+    - [Model-based](#model-based)
+    - [Data-based](#data-based)
+  - [Datasets](#datasets)
+    - [Computer Vision](#computer-vision)
+    - [Text](#text)
+    - [Tabular Data](#tabular-data)
+  - [Contribute](#contribute)
 
 
 ## Survey Papers
@@ -42,14 +51,18 @@ We arranged all published (some pre-printed) review papers in ascending order of
 | **Title** | **Year** | **Authors** | **Venue** | **Code** | **Dataset** |**Topic** | **Summary** |
 |:---------:|:--------:|:-----------:|:---------:|:--------:|:---------:|:-----------:|:-----------:|
 |||||||||
+|[Eternal Sunshine of the Spotless Net: Selective Forgetting in Deep Networks](https://openaccess.thecvf.com/content_CVPR_2020/papers/Golatkar_Eternal_Sunshine_of_the_Spotless_Net_Selective_Forgetting_in_Deep_CVPR_2020_paper.pdf)| 2020 | Golatkar et al. |_CVPR_|[Code](https://github.com/AdityaGolatkar/SelectiveForgetting)|MNIST, CIFAR, Lacuna (not open), VGGFaces2| |[Intro](short_intro/Eternal_2020_Golatkar.md)|
+|[Remember What You Want to Forget: Algorithms for Machine Unlearning](https://arxiv.org/abs/2103.03279)|	2021|	Sekhari et al.|_NeurIPS_|-|-|Theory|[Intro](short_intro/Remember_2021_Sekhari.md)|
 
 ### Data-based
 
 | **Title** | **Year** | **Authors** | **Venue** | **Code** | **Dataset** |**Topic** | **Summary** |
 |:---------:|:--------:|:-----------:|:---------:|:--------:|:---------:|:-----------:|:-----------:|
-|[Towards Making Systems Forget with Machine Unlearning](https://dl.acm.org/doi/10.1109/SP.2015.35) | 2015 | Cao et al. | _S&P_ | - | Statistical Query Learning, Exact Unlearning  | [Intro](short_intro/Towards_2015_Cao.md)|
-|[DeltaGrad: Rapid retraining of machine learning models](https://proceedings.mlr.press/v119/wu20b.html)|	2020|	Wu et al.|	_ICML_	|[Code](https://github.com/thuwuyinjun/DeltaGrad)|Data Influence, Exact Unlearning | [Intro](short_intro/DeltaGrad_2020_Wu.md)|
-|[Machine Unlearning](https://ieeexplore.ieee.org/document/9519428)|	2021|	Bourtoule et al.|	_IEEE SSP_| [Code](https://github.com/cleverhans-lab/machine-unlearning) |Data Partitioning, Exact Unlearning, CV, Class-based| [Intro](short_intro/Machine_2021_Bourtoule.md)|
+|[Towards Making Systems Forget with Machine Unlearning](https://dl.acm.org/doi/10.1109/SP.2015.35) | 2015 | Cao et al. | _S&P_ | - | Collected from Facebook (not open) |Statistical Query Learning, Exact Unlearning  | [Intro](short_intro/Towards_2015_Cao.md)|
+|[DeltaGrad: Rapid retraining of machine learning models](https://proceedings.mlr.press/v119/wu20b.html)|	2020|	Wu et al.|	_ICML_	|[Code](https://github.com/thuwuyinjun/DeltaGrad)|MNIST, RCV1, HIGGS|Data Influence, Exact Unlearning | [Intro](short_intro/DeltaGrad_2020_Wu.md)|
+|[Certified data removal from machine learning models](https://arxiv.org/abs/1911.03030)| 2020| Guo et al. |_ICML_| [Code](https://github.com/facebookresearch/certified-removal) | MNIST, LSUN, SST, SVHN|Approximate Unlearning, $L_2$-regularisation, Convex, CV, Class-based| [Intro](short_intro/Certified_2020_Guo.md)| 
+|[Machine Unlearning](https://ieeexplore.ieee.org/document/9519428)|	2021|	Bourtoule et al.|	_IEEE SSP_| [Code](https://github.com/cleverhans-lab/machine-unlearning) |Purchase, SVHN|Data Partitioning, Exact Unlearning, CV, NLP, Class-based| [Intro](short_intro/Machine_2021_Bourtoule.md)|
+
 
 
 ## Datasets
@@ -59,6 +72,8 @@ We arranged all published (some pre-printed) review papers in ascending order of
 |-------------|:------------------:|:--------:|:-----------:|
 | [MNIST](https://yann.lecun.com/exdb/mnist/)         |       28 x 28      |   60000  |      10     |
 | [SVHN](http://ufldl.stanford.edu/housenumbers/)          |     32 x 32 x 3    |  604833  |      10     |
+| [LSUN](https://github.com/fyu/lsun)| 256 x 256 x 3 | 1262277 | 10 |
+| [VGGFaces2]() | Various | 3.3 M | 9000 |
 | [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)     |     32 x 32 x 3    |   60000  |     10     |
 | [CIFAR-100](https://www.cs.toronto.edu/~kriz/cifar.html)     |     32 x 32 x 3    |   60000  |     100     |
 | [ImageNet](https://www.image-net.org/)      |    224 x 224 x 3   |  1281167 |     1000    |
@@ -69,6 +84,7 @@ We arranged all published (some pre-printed) review papers in ascending order of
 |    **Name**   | **Size** | **Classes** |
 |-------------|:--------:|:-----------:|
 |[RCV1 (Reuters Corpus Volume 1)](https://paperswithcode.com/dataset/rcv1)| 804414| 3|
+| [SST](https://nlp.stanford.edu/sentiment/treebank.html)| 215000 | 5 |
 
 ### Tabular Data
 
